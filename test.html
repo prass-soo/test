@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulasi Fire Protection</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="bgmesin">
+            <img src="assets/img/backgrnd1mesin.png">
+        </div>
+        <div class="wheelwell">
+            <img src="assets/img/wheelwell.png">
+        </div>
+        <div class="fault">
+            <img src="assets/img/fault.png">
+        </div>
+        <div class="apudetinop">
+            <img src="assets/img/apudetinop.png">
+        </div>
+        <div class="apubtldis">
+            <img src="assets/img/apubtldischrgr.png">
+        </div>
+        <div class="joy1">
+            <img id="joyone" src="assets/img/joy left.png">
+            <!-- Tambahkan input checkbox -->
+            <input type="checkbox" id="joystick" class="check-joy1" role="joy" onchange="joyone()">
+        </div>
+        <div class="engoh">
+            <img src="assets/img/eng1oh.png">
+        </div>
+        <div class="switch">
+            <!-- Tambahkan gambar yang akan diubah -->
+            <img id="switcherbot" src="assets/img/switch right.png" style="width: 100px;">
+            <!-- Tambahkan input checkbox -->
+            <input type="checkbox" id="saklar" class="check-switch1" role="switch" onchange="switcherbot()">
+        </div>
+        <div class="levengine1">
+            <img src="assets/img/lever engine 1.png">
+        </div>
+        <div class="levengineapu">
+            <img src="assets/img/lever APU.png">
+        </div>
+        <div class="engoh2">
+            <img src="assets/img/eng2oh.png">
+        </div>
+        <div class="joyengine2">
+            <img src="assets/img/joy2.png">
+        </div>
+        <div class="levengine2">
+            <img src="assets/img/lever engine 2.png">
+        </div>
+        <div class="lbtldis">
+            <img src="assets/img/lbtldischrgr.png">
+        </div>
+        <div class="rbtldis">
+            <img src="assets/img/rbtldischrgr.png">
+        </div>
+        <div class="joynumb">
+            <img id="switchernumb" src="assets/img/switch right.png" style="width: 100px;">
+            <input type="checkbox" id="joy" class="check-switch2" role="switch" onchange="switchernumb()">
+        </div>
+
+    </div>
+
+    <script>
+        function switcherbot() {
+            let saklar = document.getElementById('saklar');
+            let switcherbot = document.getElementById('switcherbot');
+
+            if (saklar.checked) {
+                switcherbot.src = 'assets/img/switch left.png'; // Ganti dengan gambar saat checkbox aktif
+            } else {
+                switcherbot.src = 'assets/img/switch right.png'; // Ganti dengan gambar saat checkbox tidak aktif
+            }
+        }
+
+        function switchernumb() {
+                let joy = document.getElementById('joy');
+                let switchernumb = document.getElementById('switchernumb');
+
+                if (joy.checked) {
+                    switchernumb.src = 'assets/img/switch left.png'; // Ganti dengan gambar saat checkbox aktif
+                } else {
+                    switchernumb.src = 'assets/img/switch right.png'; // Ganti dengan gambar saat checkbox tidak aktif
+                }
+            }
+        function joyone() {
+            let joystick = document.getElementById('joystick');
+            let joyone = document.getElementById('joyone');
+
+            if (joystick.checked) {
+                joyone.src = 'assets/img/joy right.png'; // Ganti dengan gambar saat
+            }
+            else {
+                joyone.src  = 'assets/img/joy left.png'; // Ganti dengan gambar saat
+
+            }
+        }
+    </script>
+</body>
+
+</html>
