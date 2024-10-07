@@ -50,7 +50,10 @@
             <img src="assets/img/eng2oh.png">
         </div>
         <div class="joyengine2">
-            <img src="assets/img/joy2.png">
+                <img id="joytwo" src="assets/img/joy left.png">
+                <!-- Tambahkan input checkbox -->
+                <input type="checkbox" id="joystickk" class="check-joy2" role="joy" onchange="joytwo()">
+            
         </div>
         <div class="levengine2">
             <img src="assets/img/lever engine 2.png">
@@ -99,6 +102,18 @@
             }
             else {
                 joyone.src  = 'assets/img/joy left.png'; // Ganti dengan gambar saat
+
+            }
+        }
+        function joytwo() {
+            let joystickk = document.getElementById('joystickk');
+            let joytwo = document.getElementById('joytwo');
+
+            if (joystickk.checked) {
+                joytwo.src = 'assets/img/joy right.png'; // Ganti dengan gambar saat
+            }
+            else {
+                joytwo.src  = 'assets/img/joy left.png'; // Ganti dengan gambar saat
 
             }
         }
